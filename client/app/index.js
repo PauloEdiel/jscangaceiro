@@ -5,7 +5,6 @@ var campos = [
 ]
 
 var tbody = document.querySelector('table tbody');
-console.log(campos, tbody);
 
 document.querySelector('.form').addEventListener('submit', function(event) {
   event.preventDefault();
@@ -20,4 +19,9 @@ document.querySelector('.form').addEventListener('submit', function(event) {
   tr.appendChild(tdVolume);
 
   tbody.appendChild(tr);
+
+  for (var i = 0; i < campos.length; i++) {
+    campos[i].value = '';
+  }
+  campos[0].focus();
 });

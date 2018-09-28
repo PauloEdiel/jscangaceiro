@@ -10,12 +10,14 @@ class NegociacaoController {
     this._negociacoesView = new NegociacoesView('#negociacoes');
     // recebe inicialmente, o modelo que encapsula uma lista vazia
     this._negociacoesView.update(this._negociacoes);
+    this._mensagem = new Mensagem();
   }
 
   adiciona(event) {
 
     event.preventDefault();
     this._negociacoes.adiciona(this._criaNegociacao());
+    this._mensagem = 'Negocição realizada com sucesso';
     this._negociacoesView.update(this._negociacoes);
     this._limpaFormulario();
   }

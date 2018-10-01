@@ -1,8 +1,4 @@
-class MensagemView {
-
-  constructor(selector) {
-    this._elemento = document.querySelector(selector);
-  }
+class MensagemView extends View {
 
   template(model) {
 

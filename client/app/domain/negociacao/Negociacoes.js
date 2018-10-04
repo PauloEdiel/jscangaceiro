@@ -7,7 +7,6 @@ class Negociacoes {
     Object.freeze(this);
   }
 
-
   adiciona(negociacao) {
 
     this._negociacoes.push(negociacao);
